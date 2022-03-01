@@ -36,10 +36,10 @@ export function App() {
       <header className="App-header">
         <img src= 'src\shia-labeouf.gif' className="App-logo" alt="logo" />
         <h1>JUST DO IT!</h1>
-        <ul>
+        <ul data-testid='todoList'>
         {todos.map(todo => (
           <li key={todo.id}>{todo.title}
-            <button onClick={() => {
+            <button  data-testid='removeTodo' onClick={() => {
               const updatedTodos = removeTodo(todos, todo.id)
               setTodos(updatedTodos)}}>
               x
